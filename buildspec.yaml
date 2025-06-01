@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+    install:
+        commands:
+            - echo Nothing to see here...........
+    pre_build:
+        commands:
+            - echo This is the pre build phase....
+    build:
+        commands:
+            - echo Maven build
+            - mvn install
+    post_build:
+        commands:
+            - echo Build compelete `date`
+artifacts:
+    files:
+        - 'target/appdemo-1.0-SNAPSHOT.jar'
